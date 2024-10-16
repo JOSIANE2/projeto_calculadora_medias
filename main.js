@@ -5,7 +5,6 @@ const atividades = [];
 const notas = [];
 const spanAprovado = '<span class= "resultado aprovado">Aprovado</span>';
 const spanReprovado = '<span class= "resultado reprovado">Reprovado</span>';
-
 const notaMinima = parseFloat(prompt("Digite a nota mínima:"));
 
 let linhas = '';
@@ -49,7 +48,7 @@ function atualizaTabela() {
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado  ;
 
     console.log(media);
